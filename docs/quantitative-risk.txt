@@ -1,0 +1,38 @@
+PERHITUNGAN KUANTITATIF RISIKO DC-1
+===================================
+
+Risiko yang dianalisis:
+R05 - Kegagalan ketersediaan layanan web.
+
+CATATAN:
+Semua angka biaya berikut merupakan asumsi ilustratif untuk
+keperluan pembelajaran, bukan data kerugian aktual DC-1.
+
+Asumsi:
+- Durasi gangguan: 3 jam per kejadian
+- Estimasi kerugian: Rp100.000 per jam
+- Frekuensi: 2 kejadian per tahun
+
+Perhitungan kerugian per kejadian:
+3 jam x Rp100.000 = Rp300.000
+
+Annual Loss Expectancy (ALE):
+Rp300.000 x 2 kejadian per tahun = Rp600.000 per tahun
+
+Asumsi biaya mitigasi:
+Rp400.000 per tahun.
+
+Perbandingan sederhana:
+Estimasi kerugian tahunan: Rp600.000
+Biaya mitigasi tahunan:    Rp400.000
+Selisih estimasi:          Rp200.000 per tahun
+
+Interpretasi:
+Dengan asumsi tersebut, biaya mitigasi lebih rendah daripada
+estimasi kerugian tahunan. Namun, keputusan investasi juga
+perlu mempertimbangkan efektivitas kontrol, dampak reputasi,
+dan kemungkinan kerugian yang tidak terukur.
+
+Keterbatasan:
+Frekuensi gangguan dan biaya per jam belum diukur pada DC-1.
+Perhitungan ini adalah contoh metode, bukan prediksi aktual.

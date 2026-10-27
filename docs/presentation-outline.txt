@@ -1,0 +1,68 @@
+PRESENTASI PRAKTIKUM
+ANALISIS DAN PENILAIAN RISIKO MESIN VIRTUAL DC-1
+
+SLIDE 1 — JUDUL
+Analisis dan Penilaian Risiko pada Mesin Virtual DC-1
+Nama:
+NIM:
+Mata Kuliah:
+Kelas:
+
+SLIDE 2 — TUJUAN DAN RUANG LINGKUP
+- Mengidentifikasi aset dan layanan yang terpapar.
+- Mengidentifikasi risiko keamanan berdasarkan bukti.
+- Menilai likelihood dan impact dengan skala 1–5.
+- Menyusun rekomendasi mitigasi.
+- Pengujian dilakukan dari Kali Linux ke DC-1.
+- Jaringan pengujian: VirtualBox Host-only 192.168.52.0/24.
+
+SLIDE 3 — TOPOLOGI LAB
+- Kali Linux: 192.168.52.10 pada jaringan Host-only.
+- DC-1: 192.168.52.11.
+- Pengujian dilakukan pada lingkungan virtual yang terisolasi.
+- NAT digunakan oleh Kali untuk kebutuhan jaringan terpisah.
+
+SLIDE 4 — HASIL PEMERIKSAAN
+- TCP/22: SSH, OpenSSH 6.0p1 Debian.
+- TCP/80: HTTP, Apache 2.2.22.
+- TCP/111: RPC, rpcbind.
+- Header web mengungkap PHP 5.4.45 dan Drupal 7.
+- RPC mengungkap program status.
+- Temuan berasal dari hasil pemindaian dan pemeriksaan HTTP.
+
+SLIDE 5 — PENILAIAN RISIKO
+- R01: Komponen web usang — 16, Tinggi.
+- R02: Potensi akses SSH tanpa otorisasi — 15, Tinggi.
+- R03: Paparan RPC — 9, Sedang.
+- R04: Pengungkapan versi teknologi — 6, Sedang.
+- R05: Gangguan ketersediaan layanan — 8, Sedang.
+- R06: Penyalahgunaan halaman akun/administrasi — 8, Sedang.
+- Skor merupakan estimasi awal, bukan bukti eksploitasi berhasil.
+
+SLIDE 6 — PERHITUNGAN KUANTITATIF
+Asumsi ilustratif:
+- Gangguan 3 jam per kejadian.
+- Kerugian Rp100.000 per jam.
+- Frekuensi 2 kejadian per tahun.
+- Kerugian per kejadian: Rp300.000.
+- ALE: Rp600.000 per tahun.
+- Asumsi biaya mitigasi: Rp400.000 per tahun.
+- Selisih sederhana: Rp200.000 per tahun.
+Angka bukan hasil pengukuran aktual pada DC-1.
+
+SLIDE 7 — REKOMENDASI MITIGASI
+- Tingkatkan sistem operasi dan komponen web ke versi yang didukung.
+- Batasi SSH pada jaringan administrasi dan gunakan autentikasi kuat.
+- Nonaktifkan RPC jika tidak diperlukan.
+- Audit autentikasi, otorisasi, dan halaman aplikasi.
+- Terapkan monitoring, backup, dan uji pemulihan.
+- Validasi risiko bersama pemilik sistem.
+
+SLIDE 8 — KESIMPULAN
+- DC-1 mengekspos beberapa layanan jaringan.
+- Komponen web terdeteksi menggunakan versi lama.
+- Risiko tertinggi pada penilaian awal adalah komponen web dan SSH.
+- Pemeriksaan ini belum membuktikan keberhasilan eksploitasi.
+- Prioritas berikutnya adalah mitigasi, verifikasi, dan pengujian ulang.
+
+TERIMA KASIH

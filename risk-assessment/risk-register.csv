@@ -1,0 +1,7 @@
+ID,Aset,Ancaman atau Risiko,Bukti,Kontrol yang Disarankan,Likelihood,Impact,Skor,Kategori,Penanggung Jawab
+R01,Web server dan CMS,Kompromi melalui komponen web usang,Apache 2.2.22 PHP 5.4.45 Drupal 7 terdeteksi,Upgrade komponen ke versi didukung dan uji patch,4,4,16,Tinggi,Administrator sistem
+R02,Layanan SSH,Akses administrasi tanpa otorisasi,Port 22 terbuka dengan OpenSSH 6.0p1,Perbarui SSH batasi akses gunakan autentikasi kuat,3,5,15,Tinggi,Administrator sistem
+R03,Layanan RPC,Paparan informasi layanan RPC,Port 111 terbuka dan program status terdeteksi,Nonaktifkan RPC jika tidak diperlukan atau batasi akses jaringan,3,3,9,Sedang,Administrator jaringan
+R04,Informasi teknologi web,Pengungkapan versi komponen melalui HTTP,Header mengungkap Apache PHP dan Drupal,Tinjau header dan kurangi informasi versi yang tidak diperlukan,3,2,6,Sedang,Administrator web
+R05,Layanan web,Kegagalan ketersediaan akibat gangguan layanan,HTTP merespons 200 OK; belum ada bukti gangguan,Monitoring layanan backup dan prosedur pemulihan,2,4,8,Sedang,Administrator sistem
+R06,Konfigurasi aplikasi,Penyalahgunaan halaman akun atau administrasi,robots.txt mencantumkan jalur sensitif; akses belum diuji,Audit autentikasi otorisasi dan pembatasan akses,2,4,8,Sedang,Administrator aplikasi

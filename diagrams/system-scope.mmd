@@ -1,0 +1,9 @@
+flowchart TB
+    K["Kali Linux<br/>Mesin penguji"]
+    H["VirtualBox Host-only<br/>192.168.52.0/24"]
+    D["DC-1<br/>192.168.52.11"]
+    N["NAT VirtualBox<br/>Akses internet Kali"]
+
+    K -->|"eth1: 192.168.52.10<br/>Nmap, HTTP, RPC"| H
+    H --> D
+    K -.->|"eth0: jaringan NAT terpisah"| N

@@ -1,0 +1,43 @@
+RINGKASAN EKSEKUTIF
+Analisis dan Penilaian Risiko Mesin Virtual DC-1
+
+Tujuan
+Penilaian ini bertujuan mengidentifikasi aset, paparan layanan,
+risiko keamanan, serta kontrol mitigasi pada mesin virtual DC-1.
+
+Ruang Lingkup
+Pengujian dilakukan dari Kali Linux terhadap DC-1 pada jaringan
+Host-only VirtualBox. Target teridentifikasi pada alamat
+192.168.52.11. Pemeriksaan mencakup pemindaian port TCP,
+identifikasi versi layanan, respons HTTP, robots.txt, dan RPC.
+
+Temuan Utama
+Tiga port TCP terdeteksi terbuka: 22/SSH, 80/HTTP, dan 111/RPC.
+Header HTTP mengungkap Apache 2.2.22, PHP 5.4.45, dan Drupal 7.
+Pemeriksaan RPC menemukan program rpcbind dan status.
+
+Penilaian Risiko
+Risiko prioritas awal adalah penggunaan komponen web usang
+(skor 16/Tinggi), potensi akses SSH tanpa otorisasi
+(skor 15/Tinggi), serta paparan layanan RPC (skor 9/Sedang).
+Skor merupakan estimasi awal berdasarkan skala likelihood dan
+impact 1-5, bukan bukti eksploitasi berhasil.
+
+Rekomendasi
+1. Prioritaskan peningkatan komponen web ke versi yang didukung.
+2. Batasi akses SSH dan terapkan autentikasi yang kuat.
+3. Nonaktifkan RPC jika tidak diperlukan atau batasi aksesnya.
+4. Tinjau pengungkapan versi dan konfigurasi aplikasi.
+5. Terapkan pemantauan, pencadangan, dan prosedur pemulihan.
+
+Keterbatasan
+Penilaian ini menggunakan bukti pengamatan jaringan terbatas.
+Konfigurasi autentikasi, keberhasilan eksploitasi, dampak aktual,
+dan biaya gangguan belum diverifikasi. Risiko perlu divalidasi
+oleh pemilik sistem sebelum digunakan untuk keputusan operasional.
+
+Kesimpulan
+DC-1 memperlihatkan paparan beberapa layanan dan teknologi lama
+yang perlu ditinjau. Pembaruan perangkat lunak, pembatasan akses,
+dan pengurangan layanan yang tidak diperlukan merupakan prioritas
+mitigasi awal.

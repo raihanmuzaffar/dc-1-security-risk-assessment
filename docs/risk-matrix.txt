@@ -1,0 +1,19 @@
+MATRIKS RISIKO DC-1
+Skor = Likelihood x Impact
+
+Dampak ->       1       2       3       4       5
+Likelihood 5    5 M     10 H    15 H    20 VH   25 VH
+Likelihood 4    4 L      8 M    12 H    16 H    20 VH
+Likelihood 3    3 L      6 M     9 M    12 H    15 H
+Likelihood 2    2 L      4 L     6 M     8 M    10 H
+Likelihood 1    1 L      2 L     3 L     4 L     5 M
+
+Kategori:
+1-4   = Low (L)
+5-9   = Medium (M)
+10-16 = High (H)
+17-25 = Very High (VH)
+
+Catatan:
+Skor risiko saat ini adalah estimasi awal untuk pembelajaran.
+Validasi kemungkinan dan dampak bersama pemilik sistem.

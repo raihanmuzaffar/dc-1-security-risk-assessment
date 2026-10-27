@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*
+secrets*
+*.log
+*.tmp
+*.swp
+__pycache__/
+.DS_Store
+.vscode/
+*.ova
+*.vdi
+*.vmdk
+Snapshots/
